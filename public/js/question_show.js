@@ -12,6 +12,7 @@ $container.find('a').on('click', function(e) {
         url: '/comments/10/vote/'+$link.data('direction'),
         method: 'POST'
     }).then(function(data) {
+        console.log(data);
         // use field votes because in controller we return votes
         $container.find('.js-vote-total').text(data.votes);
     });
